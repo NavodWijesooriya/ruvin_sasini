@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -60,6 +59,28 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline;
   }
+}
+
+@keyframes float-heart {
+  0% {
+    transform: translateY(110vh) translateX(0) scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+    transform: translateY(90vh) translateX(10px) scale(1) rotate(10deg);
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(-20px) scale(1.5) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.animate-heart {
+  animation: float-heart linear infinite;
 }
 
 .parallax-container {
