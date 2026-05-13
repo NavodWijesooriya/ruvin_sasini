@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -32,9 +31,6 @@ export default function AdminDashboard() {
       const result = await personalizeGuestMessage({
         guestName: guest.guestName,
         rsvpStatus: guest.rsvpStatus,
-        mealPreference: guest.mealPreference,
-        dietaryRestrictions: guest.dietaryRestrictions,
-        group: guest.group,
         messageType: type,
         additionalContext: "The wedding is in Florence, Italy at Villa di Maiano.",
       });
@@ -52,9 +48,9 @@ export default function AdminDashboard() {
 
   const exportData = () => {
     const csvContent = "data:text/csv;charset=utf-8," 
-      + ["Name,Email,Status,Meal,Diet,Group,Submitted"].join(",") + "\n"
+      + ["Name,Status,Submitted"].join(",") + "\n"
       + responses.map(r => [
-          r.guestName, r.email, r.rsvpStatus, r.mealPreference, r.dietaryRestrictions, r.group, r.submittedAt
+          r.guestName, r.rsvpStatus, r.submittedAt
         ].join(",")).join("\n");
     
     const encodedUri = encodeURI(csvContent);
@@ -69,10 +65,6 @@ export default function AdminDashboard() {
     total: responses.length,
     confirmed: responses.filter(r => r.rsvpStatus === 'Confirmed').length,
     declined: responses.filter(r => r.rsvpStatus === 'Declined').length,
-    beef: responses.filter(r => r.mealPreference?.includes('Beef')).length,
-    fish: responses.filter(r => r.mealPreference?.includes('Seabass')).length,
-    vegetarian: responses.filter(r => r.mealPreference?.includes('(V)')).length,
-    vegan: responses.filter(r => r.mealPreference?.includes('(VG)')).length,
   };
 
   if (isLoading) {
@@ -96,7 +88,7 @@ export default function AdminDashboard() {
         </Button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card>
           <CardHeader className="pb-2">
             <CardDescription className="flex items-center gap-2">
@@ -121,18 +113,6 @@ export default function AdminDashboard() {
             <CardTitle className="text-3xl text-red-600">{stats.declined}</CardTitle>
           </CardHeader>
         </Card>
-        <Card>
-          <CardHeader className="pb-2">
-            <CardDescription className="flex items-center gap-2">
-              <MessageSquare className="w-4 h-4" /> Meals Selected
-            </CardDescription>
-            <div className="text-xs space-y-1 mt-2">
-              <div className="flex justify-between"><span>Beef:</span> <span>{stats.beef}</span></div>
-              <div className="flex justify-between"><span>Fish:</span> <span>{stats.fish}</span></div>
-              <div className="flex justify-between"><span>Veg:</span> <span>{stats.vegetarian}</span></div>
-            </div>
-          </CardHeader>
-        </Card>
       </div>
 
       <Tabs defaultValue="guests" className="w-full">
@@ -147,8 +127,7 @@ export default function AdminDashboard() {
               <TableRow>
                 <TableHead>Guest Name</TableHead>
                 <TableHead>Status</TableHead>
-                <TableHead>Meal Choice</TableHead>
-                <TableHead>Group</TableHead>
+                <TableHead>Submitted At</TableHead>
                 <TableHead>Actions</TableHead>
               </TableRow>
             </TableHeader>
@@ -157,20 +136,15 @@ export default function AdminDashboard() {
                 <TableRow key={guest.id}>
                   <TableCell className="font-medium">
                     {guest.guestName}
-                    <div className="text-xs text-muted-foreground font-normal">{guest.email}</div>
                   </TableCell>
                   <TableCell>
                     <Badge variant={guest.rsvpStatus === 'Confirmed' ? 'default' : guest.rsvpStatus === 'Declined' ? 'destructive' : 'secondary'}>
                       {guest.rsvpStatus}
                     </Badge>
                   </TableCell>
-                  <TableCell className="text-sm">
-                    {guest.mealPreference || 'N/A'}
-                    {guest.dietaryRestrictions && (
-                      <div className="text-xs text-accent mt-1">Note: {guest.dietaryRestrictions}</div>
-                    )}
+                  <TableCell className="text-sm text-muted-foreground">
+                    {new Date(guest.submittedAt).toLocaleDateString()}
                   </TableCell>
-                  <TableCell>{guest.group || 'Individual'}</TableCell>
                   <TableCell>
                     <Dialog>
                       <DialogTrigger asChild>
@@ -215,7 +189,7 @@ export default function AdminDashboard() {
               ))}
               {responses.length === 0 && (
                 <TableRow>
-                  <TableCell colSpan={5} className="text-center py-12 text-muted-foreground">
+                  <TableCell colSpan={4} className="text-center py-12 text-muted-foreground">
                     No RSVP responses yet. Send out the invitations!
                   </TableCell>
                 </TableRow>
@@ -231,10 +205,9 @@ export default function AdminDashboard() {
               <CardDescription>Select groups of guests to generate mass communication drafts.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-sm text-muted-foreground">This feature allows you to quickly generate customized arrival instructions or thank you notes for specific groups (e.g. Wedding Party, Out-of-towners) using the guest data collected.</p>
+              <p className="text-sm text-muted-foreground">This feature allows you to quickly generate customized arrival instructions or thank you notes using the guest data collected.</p>
               <div className="flex gap-4">
                 <Button variant="outline">Select All "Confirmed"</Button>
-                <Button variant="outline">Select "Wedding Party"</Button>
               </div>
               <div className="p-8 border-2 border-dashed rounded-xl flex items-center justify-center text-muted-foreground italic">
                 Advanced mass messaging coming soon. Use individual "AI Msg" tools for now.
