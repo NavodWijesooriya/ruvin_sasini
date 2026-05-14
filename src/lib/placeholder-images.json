@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Elegant blue abstract background",
+      "imageUrl": "https://picsum.photos/seed/blue-bg/1920/1080",
+      "imageHint": "blue background"
+    },
+    {
+      "id": "hero-couple",
+      "description": "Romantic wedding couple photo",
+      "imageUrl": "https://picsum.photos/seed/couple-photo/800/1000",
+      "imageHint": "wedding couple"
+    },
+    {
+      "id": "story-1",
+      "description": "Couple walking together in a garden",
+      "imageUrl": "https://picsum.photos/seed/aethel-story1/800/1000",
+      "imageHint": "romantic couple"
+    },
+    {
+      "id": "story-2",
+      "description": "Details of wedding rings and flowers",
+      "imageUrl": "https://picsum.photos/seed/aethel-story2/800/600",
+      "imageHint": "wedding rings"
+    },
+    {
+      "id": "venue",
+      "description": "Beautiful historic wedding venue building",
+      "imageUrl": "https://picsum.photos/seed/aethel-venue/1200/800",
+      "imageHint": "wedding venue"
+    }
+  ]
 }
