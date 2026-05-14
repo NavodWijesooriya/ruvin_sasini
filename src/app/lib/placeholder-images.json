@@ -3,13 +3,13 @@
   "placeholderImages": [
     {
       "id": "hero-bg",
-      "description": "Elegant blue abstract background",
-      "imageUrl": "https://picsum.photos/seed/blue-bg/1920/1080",
-      "imageHint": "blue background"
+      "description": "Romantic wedding couple in a beautiful landscape",
+      "imageUrl": "https://picsum.photos/seed/aethel-hero-bg/1920/1080",
+      "imageHint": "romantic couple"
     },
     {
       "id": "hero-couple",
-      "description": "Romantic wedding couple photo",
+      "description": "Romantic wedding couple portrait",
       "imageUrl": "https://picsum.photos/seed/couple-photo/800/1000",
       "imageHint": "wedding couple"
     },
