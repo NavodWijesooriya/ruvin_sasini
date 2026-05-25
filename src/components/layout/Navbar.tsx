@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -46,12 +45,6 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Link 
-            href="/admin" 
-            className="text-xs uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors border-l pl-10 border-border"
-          >
-            Admin
-          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -76,13 +69,6 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Link 
-            href="/admin" 
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="text-sm uppercase tracking-widest text-center text-muted-foreground mt-4"
-          >
-            Organizer Panel
-          </Link>
         </div>
       )}
     </nav>
