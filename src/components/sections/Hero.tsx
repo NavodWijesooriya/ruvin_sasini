@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from 'next/image';
@@ -17,7 +16,7 @@ export default function Hero() {
           fill
           className="object-cover"
           priority
-          data-ai-hint="romantic couple"
+          data-ai-hint="couple selfie"
         />
         {/* Enhanced overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-black/30" />

@@ -2,13 +2,13 @@
   "placeholderImages": [
     {
       "id": "hero-bg",
-      "description": "Elegant blue abstract background",
-      "imageUrl": "https://picsum.photos/seed/blue-bg/1920/1080",
-      "imageHint": "blue background"
+      "description": "Romantic couple selfie at the beach",
+      "imageUrl": "https://picsum.photos/seed/couple-beach-selfie/1920/1080",
+      "imageHint": "couple selfie"
     },
     {
       "id": "hero-couple",
-      "description": "Romantic wedding couple photo",
+      "description": "Romantic wedding couple portrait",
       "imageUrl": "https://picsum.photos/seed/couple-photo/800/1000",
       "imageHint": "wedding couple"
     },

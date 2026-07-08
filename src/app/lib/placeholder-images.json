@@ -1,11 +1,10 @@
-
 {
   "placeholderImages": [
     {
       "id": "hero-bg",
-      "description": "Romantic wedding couple in a beautiful landscape",
-      "imageUrl": "https://picsum.photos/seed/aethel-hero-bg/1920/1080",
-      "imageHint": "romantic couple"
+      "description": "Romantic couple selfie at the beach",
+      "imageUrl": "https://picsum.photos/seed/couple-beach-selfie/1920/1080",
+      "imageHint": "couple selfie"
     },
     {
       "id": "hero-couple",
