@@ -1,10 +1,11 @@
+
 {
   "placeholderImages": [
     {
       "id": "hero-bg",
-      "description": "Romantic couple selfie at the beach",
-      "imageUrl": "https://picsum.photos/seed/couple-beach-selfie/1920/1080",
-      "imageHint": "couple selfie"
+      "description": "Main background photo of Arthur and Elara",
+      "imageUrl": "https://picsum.photos/seed/aethel-main-hero/1920/1080",
+      "imageHint": "romantic couple"
     },
     {
       "id": "hero-couple",
