@@ -4,27 +4,27 @@ import ScrollReveal from '@/components/ui/scroll-reveal';
 
 const events = [
   {
-    time: '3:00 PM',
-    title: 'The Ceremony',
-    description: 'Exchange of vows in the olive grove.',
+    time: '9:30 AM',
+    title: 'Guest Arrival',
+    description: 'Guests gather at St. Joseph\'s Church, Walikada, and settle in before the service begins.',
     icon: Heart,
   },
   {
-    time: '4:30 PM',
-    title: 'Cocktail Hour',
-    description: 'Refreshing drinks and artisanal appetizers.',
+    time: 'Morning',
+    title: 'The Ceremony',
+    description: 'A formal church wedding with prayers, vows, and blessings for the couple.',
     icon: GlassWater,
   },
   {
-    time: '6:30 PM',
-    title: 'Grand Dinner',
-    description: 'A traditional Tuscan four-course meal.',
+    time: 'After the Service',
+    title: 'Family Greetings',
+    description: 'Time for photos, congratulations, and a few quiet moments with family and friends.',
     icon: Utensils,
   },
   {
-    time: '9:00 PM',
+    time: 'Later',
     title: 'Celebration',
-    description: 'Music, dancing, and cake cutting.',
+    description: 'The day continues with refreshments and heartfelt conversations.',
     icon: Music,
   },
 ];
@@ -35,15 +35,15 @@ export default function Timeline() {
       <div className="max-w-4xl mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="font-headline text-4xl md:text-6xl text-primary mb-4">The Schedule</h2>
-            <p className="text-muted-foreground">Saturday, October 12, 2025</p>
+            <h2 className="font-headline text-4xl md:text-6xl text-primary mb-4">The Day</h2>
+            <p className="text-muted-foreground">Thursday, August 6, 2026</p>
           </div>
         </ScrollReveal>
-        
+
         <div className="space-y-12">
           {events.map((event, index) => (
-            <ScrollReveal 
-              key={index} 
+            <ScrollReveal
+              key={index}
               animation={index % 2 === 0 ? "animate-fade-in-left" : "animate-fade-in-right"}
               delay={`${index * 0.15}s`}
             >

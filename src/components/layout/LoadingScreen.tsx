@@ -20,7 +20,7 @@ export default function LoadingScreen() {
   if (!isVisible) return null;
 
   return (
-    <div 
+    <div
       className={cn(
         "fixed inset-0 z-[100] flex items-center justify-center bg-background overflow-hidden transition-opacity duration-1000 ease-in-out",
         isFading ? "opacity-0 pointer-events-none" : "opacity-100"
@@ -29,7 +29,7 @@ export default function LoadingScreen() {
       {/* Drifting Hearts Background */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(15)].map((_, i) => (
-          <Heart 
+          <Heart
             key={i}
             className="loading-heart absolute text-accent/10 fill-accent/5"
             style={{
@@ -47,10 +47,10 @@ export default function LoadingScreen() {
       <div className="relative text-center z-10">
         <div className="relative mb-8 inline-block">
           {/* Animated Heart Path */}
-          <svg 
-            width="140" 
-            height="140" 
-            viewBox="0 0 100 100" 
+          <svg
+            width="140"
+            height="140"
+            viewBox="0 0 100 100"
             className="mx-auto drop-shadow-sm scale-110"
           >
             <path
@@ -63,21 +63,21 @@ export default function LoadingScreen() {
             />
             <circle cx="50" cy="45" r="2" fill="hsl(var(--accent))" className="center-dot" />
           </svg>
-          
+
           <div className="absolute inset-0 flex items-center justify-center mt-2">
             <span className="font-headline text-xl tracking-[0.2em] text-primary font-light animate-heart-beat">
               A & E
             </span>
           </div>
         </div>
-        
+
         <div className="space-y-4">
           <h1 className="font-headline text-5xl tracking-[0.4em] text-primary uppercase reveal-text mb-2">
-            Aethel
+            Ruwin & Sasini
           </h1>
           <div className="overflow-hidden">
             <p className="font-headline italic text-lg text-muted-foreground opacity-0 animate-[fade-in-up_1s_ease-out_1.2s_forwards]">
-              Celebrating our love story
+              A save-the-date for a church wedding in Walikada
             </p>
           </div>
         </div>

@@ -1,5 +1,7 @@
 
 import Image from 'next/image';
+import storyInvitationImage from '@/assets/images/DSC_082300.jpg.jpeg';
+import invitationDetailImage from '@/assets/images/DSC00048-1.jpeg';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import ScrollReveal from '@/components/ui/scroll-reveal';
 
@@ -14,8 +16,8 @@ export default function Story() {
           <ScrollReveal animation="animate-fade-in-left">
             <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src={img1?.imageUrl || ''}
-                alt="Elara and Arthur"
+                src={storyInvitationImage}
+                alt="A floral save-the-date card for Ruwin and Sasini"
                 fill
                 className="object-cover"
                 data-ai-hint="romantic couple"
@@ -23,26 +25,26 @@ export default function Story() {
             </div>
           </ScrollReveal>
         </div>
-        
+
         <div className="md:col-span-7 space-y-8 md:pl-12">
           <ScrollReveal animation="animate-fade-in-right">
-            <h2 className="font-headline text-4xl md:text-6xl text-primary mb-8">How it all began...</h2>
+            <h2 className="font-headline text-4xl md:text-6xl text-primary mb-8">A closer look at the invitation</h2>
             <div className="prose prose-lg text-muted-foreground font-body space-y-4">
               <p>
-                It started with a shared umbrella on a rainy Tuesday in Florence. Elara was rushing to a lecture, and Arthur was trying to find a hidden bookstore.
+                The card is designed like a framed keepsake: soft white space, watercolor violets climbing up the left edge, and elegant script that drifts across the page like hand-written calligraphy.
               </p>
               <p>
-                Five years, three continents, and one very energetic golden retriever later, we're making it official. Our journey has been defined by late-night conversations, shared dreams, and a mutual love for the quiet moments between the milestones.
+                At the center of the design, the family names and formal wording lead into the couple's names, Ruwin and Sasini, before landing on the date, Thursday, August 6, 2026, and the ceremony location, St. Joseph's Church in Walikada. It reads less like a simple announcement and more like a promise of a day built around faith, family, and celebration.
               </p>
             </div>
           </ScrollReveal>
-          
+
           <div className="grid grid-cols-2 gap-4 pt-8">
             <ScrollReveal animation="animate-fade-in-up" delay="0.2s">
               <div className="relative h-48 rounded-xl overflow-hidden shadow-lg transform translate-y-8">
                 <Image
-                  src={img2?.imageUrl || ''}
-                  alt="Details"
+                  src={invitationDetailImage}
+                  alt="Invitation detail"
                   fill
                   className="object-cover"
                   data-ai-hint="wedding rings"
@@ -51,7 +53,7 @@ export default function Story() {
             </ScrollReveal>
             <ScrollReveal animation="animate-fade-in-up" delay="0.4s">
               <div className="flex flex-col justify-end h-full">
-                <p className="font-headline italic text-xl text-primary">"Every heart sings a song, incomplete, until another heart whispers back."</p>
+                <p className="font-headline italic text-xl text-primary">"A floral border, a carefully chosen script, and one clear date turn the invitation into a memory before the ceremony even begins."</p>
               </div>
             </ScrollReveal>
           </div>

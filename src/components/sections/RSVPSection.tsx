@@ -51,8 +51,8 @@ export default function RSVPSection() {
     <section id="rsvp" className="py-24 bg-background px-6">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-4xl md:text-6xl text-primary mb-4">Will You Attend?</h2>
-          <p className="text-muted-foreground">Please respond by September 1st, 2025</p>
+          <h2 className="font-headline text-4xl md:text-6xl text-primary mb-4">Will You Join Us?</h2>
+          <p className="text-muted-foreground">Let us know if you'll be with us for the church ceremony and celebrations.</p>
         </div>
 
         <Form {...form}>

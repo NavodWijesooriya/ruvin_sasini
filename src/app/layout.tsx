@@ -1,11 +1,11 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import './globals.css';
 import LoadingScreen from '@/components/layout/LoadingScreen';
 import FloatingHearts from '@/components/ui/floating-hearts';
 
 export const metadata: Metadata = {
-  title: 'Aethel | Wedding Invitation',
-  description: 'Join us for our special day. RSVP and more details inside.',
+  title: 'Ruwin & Sasini | Wedding Invitation',
+  description: 'A hand-painted save-the-date for Ruwin and Sasini, with church ceremony details, travel context, and RSVP information.',
 };
 
 export default function RootLayout({

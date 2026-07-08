@@ -31,14 +31,14 @@ export default function Navbar() {
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="font-headline text-3xl text-primary tracking-tighter">
-          Aethel
+          Ruwin & Sasini
         </Link>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
+            <Link
+              key={link.name}
               href={link.href}
               className="font-headline text-lg hover:text-accent transition-colors"
             >
@@ -48,7 +48,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button 
+        <button
           className="md:hidden text-primary"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
@@ -60,8 +60,8 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background border-t shadow-xl p-6 flex flex-col gap-6 animate-fade-in-up">
           {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
+            <Link
+              key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
               className="font-headline text-2xl text-center"
