@@ -31,7 +31,7 @@ export default function Hero() {
           </h1>
           <div className="w-24 h-[1px] bg-white/50 mx-auto mb-8" />
           <p className="font-headline italic text-2xl md:text-4xl text-white/90 mb-12 drop-shadow-md">
-            Thursday, August 6, 2026 • St. Joseph's Church, Walikada
+            {/* Thursday, August 6, 2026 • St. Joseph's Church, Walikada */}
           </p>
           <a
             href="#rsvp"

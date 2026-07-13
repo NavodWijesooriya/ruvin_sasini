@@ -31,10 +31,9 @@ export default function Story() {
             <h2 className="font-headline text-4xl md:text-6xl text-primary mb-8">A closer look at the invitation</h2>
             <div className="prose prose-lg text-muted-foreground font-body space-y-4">
               <p>
-                The card is designed like a framed keepsake: soft white space, watercolor violets climbing up the left edge, and elegant script that drifts across the page like hand-written calligraphy.
-              </p>
-              <p>
-                At the center of the design, the family names and formal wording lead into the couple's names, Ruvin and Sasini, before landing on the date, Thursday, August 6, 2026, and the ceremony location, St. Joseph's Church in Walikada. It reads less like a simple announcement and more like a promise of a day built around faith, family, and celebration.
+                From the very beginning, our journey together has been woven with shared dreams, quiet laughter, and a deep, anchoring faith. We’ve always believed that the best love stories aren’t just about the moments that take your breath away, but about the steady, beautiful foundation you build together day by day.
+
+                Like the watercolor violets that frame our invitation—symbols of devotion, faithfulness, and everlasting love—our bond has grown naturally, rooted in family and nurtured by grace. Through every season, we have found in each other a best friend, a confidant, and a home.
               </p>
             </div>
           </ScrollReveal>

@@ -77,7 +77,7 @@ export default function LoadingScreen() {
           </h1>
           <div className="overflow-hidden">
             <p className="font-headline italic text-lg text-muted-foreground opacity-0 animate-[fade-in-up_1s_ease-out_1.2s_forwards]">
-              A save-the-date for a church wedding in Walikada
+              Save the Date: A Promise of Love & Faith
             </p>
           </div>
         </div>
