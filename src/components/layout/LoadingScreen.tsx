@@ -66,7 +66,7 @@ export default function LoadingScreen() {
 
           <div className="absolute inset-0 flex items-center justify-center mt-2">
             <span className="font-headline text-xl tracking-[0.2em] text-primary font-light animate-heart-beat">
-              A & E
+              R & S
             </span>
           </div>
         </div>

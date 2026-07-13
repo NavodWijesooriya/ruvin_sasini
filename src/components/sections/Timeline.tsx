@@ -100,7 +100,7 @@ export default function Timeline() {
             title="First Day Venue"
             venue="St. Joseph's Church, Walikada"
             note="Guests attending the ceremony should plan to arrive a little early so they can settle in before the service begins."
-            mapSrc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126694.9109887608!2d79.81089089726565!3d7.100950000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2fa43c4cab6f1%3A0xa9696945f6b6f46a!2zU3QuSm9zZXBoJ3MgQ2h1cmNoIC0gV2VsaWthZGEgfCDgt4Pgt48uIOC2ouC3neC3geC2tOC3iiDgtq_gt5rgt4Dgt4Pgt4rgtq7gt4_gtrHgtrogLSDgt4Dgt5Dgtr3gt5Lgtprgtqk!5e0!3m2!1sen!2slk!4v1783510494923!5m2!1sen!2slk"
+            mapSrc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.2499191924835!2d79.94548209999999!3d7.0970049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2fb006c08970f%3A0x94a93bf3777e48b1!2sSt.%20Joseph%20Church%2C%20Welikada!5e0!3m2!1sen!2slk!4v1783951329295!5m2!1sen!2slk"
             travelNote="Plan a little extra time if you are traveling from outside Walikada, and aim to arrive before 9:30 AM so you can settle in before the ceremony."
             stayNote="If you are staying overnight, choose a nearby hotel or guesthouse in Colombo or the surrounding area for an easier morning arrival."
             parkingNote="Street parking can be limited near the church, so a drop-off or early arrival is the easiest option."
