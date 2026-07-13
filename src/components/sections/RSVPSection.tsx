@@ -21,6 +21,8 @@ type RSVPFormValues = z.infer<typeof rsvpSchema>;
 
 export default function RSVPSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const form = useForm<RSVPFormValues>({
     resolver: zodResolver(rsvpSchema),
@@ -29,9 +31,22 @@ export default function RSVPSection() {
     },
   });
 
-  const onSubmit = (data: RSVPFormValues) => {
-    saveRSVP(data);
-    setIsSubmitted(true);
+  const onSubmit = async (data: RSVPFormValues) => {
+    setIsSaving(true);
+    setSubmitError(null);
+
+    try {
+      await saveRSVP(data);
+      setIsSubmitted(true);
+      form.reset({
+        guestName: '',
+        rsvpStatus: 'Confirmed',
+      });
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : 'Unable to save your RSVP right now.');
+    } finally {
+      setIsSaving(false);
+    }
   };
 
   if (isSubmitted) {
@@ -102,8 +117,14 @@ export default function RSVPSection() {
               )}
             />
 
+            {submitError ? (
+              <p className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                {submitError}
+              </p>
+            ) : null}
+
             <Button type="submit" className="w-full h-12 text-lg bg-accent hover:bg-accent/90">
-              Submit RSVP
+              {isSaving ? 'Saving RSVP...' : 'Submit RSVP'}
             </Button>
           </form>
         </Form>

@@ -21,8 +21,33 @@ export default function AdminDashboard() {
   const { toast } = useToast();
 
   useEffect(() => {
-    setResponses(getResponses());
-    setIsLoading(false);
+    let isActive = true;
+
+    const loadResponses = async () => {
+      try {
+        const loadedResponses = await getResponses();
+
+        if (isActive) {
+          setResponses(loadedResponses);
+        }
+      } catch (error) {
+        toast({
+          title: 'Unable to load RSVPs',
+          description: error instanceof Error ? error.message : 'There was a problem loading guest responses.',
+          variant: 'destructive',
+        });
+      } finally {
+        if (isActive) {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    void loadResponses();
+
+    return () => {
+      isActive = false;
+    };
   }, []);
 
   const handleGenerateMessage = async (guest: GuestResponse, type: MessageType) => {
@@ -47,12 +72,12 @@ export default function AdminDashboard() {
   };
 
   const exportData = () => {
-    const csvContent = "data:text/csv;charset=utf-8," 
+    const csvContent = "data:text/csv;charset=utf-8,"
       + ["Name,Status,Submitted"].join(",") + "\n"
       + responses.map(r => [
-          r.guestName, r.rsvpStatus, r.submittedAt
-        ].join(",")).join("\n");
-    
+        r.guestName, r.rsvpStatus, r.submittedAt
+      ].join(",")).join("\n");
+
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");
     link.setAttribute("href", encodedUri);
@@ -120,7 +145,7 @@ export default function AdminDashboard() {
           <TabsTrigger value="guests">Guest List</TabsTrigger>
           <TabsTrigger value="ai-tools">AI Messaging</TabsTrigger>
         </TabsList>
-        
+
         <TabsContent value="guests" className="border rounded-xl bg-card">
           <Table>
             <TableHeader>
