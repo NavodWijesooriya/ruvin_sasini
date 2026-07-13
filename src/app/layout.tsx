@@ -4,8 +4,8 @@ import LoadingScreen from '@/components/layout/LoadingScreen';
 import FloatingHearts from '@/components/ui/floating-hearts';
 
 export const metadata: Metadata = {
-  title: 'Ruwin & Sasini | Wedding Invitation',
-  description: 'A hand-painted save-the-date for Ruwin and Sasini, with church ceremony details, travel context, and RSVP information.',
+  title: 'Ruvin & Sasini | Wedding Invitation',
+  description: 'A hand-painted save-the-date for Ruvin and Sasini, with church ceremony details, travel context, and RSVP information.',
 };
 
 export default function RootLayout({

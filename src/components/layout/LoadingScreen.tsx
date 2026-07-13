@@ -73,7 +73,7 @@ export default function LoadingScreen() {
 
         <div className="space-y-4">
           <h1 className="font-headline text-5xl tracking-[0.4em] text-primary uppercase reveal-text mb-2">
-            Ruwin & Sasini
+            Ruvin & Sasini
           </h1>
           <div className="overflow-hidden">
             <p className="font-headline italic text-lg text-muted-foreground opacity-0 animate-[fade-in-up_1s_ease-out_1.2s_forwards]">

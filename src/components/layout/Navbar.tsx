@@ -31,7 +31,7 @@ export default function Navbar() {
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="font-headline text-3xl text-primary tracking-tighter">
-          Ruwin & Sasini
+          Ruvin & Sasini
         </Link>
 
         {/* Desktop Links */}

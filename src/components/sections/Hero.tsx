@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src={heroBg}
-          alt="Ruwin and Sasini wedding invitation inspiration"
+          alt="Ruvin and Sasini wedding invitation inspiration"
           fill
           className="object-cover"
           priority
@@ -27,7 +27,7 @@ export default function Hero() {
             Save the date for the wedding of
           </span>
           <h1 className="font-headline text-7xl md:text-9xl text-white mb-8 leading-tight drop-shadow-lg">
-            Ruwin & Sasini
+            Ruvin & Sasini
           </h1>
           <div className="w-24 h-[1px] bg-white/50 mx-auto mb-8" />
           <p className="font-headline italic text-2xl md:text-4xl text-white/90 mb-12 drop-shadow-md">

@@ -17,7 +17,7 @@ export default function Story() {
             <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src={storyInvitationImage}
-                alt="A floral save-the-date card for Ruwin and Sasini"
+                alt="A floral save-the-date card for Ruvin and Sasini"
                 fill
                 className="object-cover"
                 data-ai-hint="romantic couple"
@@ -34,14 +34,14 @@ export default function Story() {
                 The card is designed like a framed keepsake: soft white space, watercolor violets climbing up the left edge, and elegant script that drifts across the page like hand-written calligraphy.
               </p>
               <p>
-                At the center of the design, the family names and formal wording lead into the couple's names, Ruwin and Sasini, before landing on the date, Thursday, August 6, 2026, and the ceremony location, St. Joseph's Church in Walikada. It reads less like a simple announcement and more like a promise of a day built around faith, family, and celebration.
+                At the center of the design, the family names and formal wording lead into the couple's names, Ruvin and Sasini, before landing on the date, Thursday, August 6, 2026, and the ceremony location, St. Joseph's Church in Walikada. It reads less like a simple announcement and more like a promise of a day built around faith, family, and celebration.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 gap-4 pt-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-8">
             <ScrollReveal animation="animate-fade-in-up" delay="0.2s">
-              <div className="relative h-48 rounded-xl overflow-hidden shadow-lg transform translate-y-8">
+              <div className="relative h-56 sm:h-48 rounded-xl overflow-hidden shadow-lg transform translate-y-0 sm:translate-y-8">
                 <Image
                   src={invitationDetailImage}
                   alt="Invitation detail"
