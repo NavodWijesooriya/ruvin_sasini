@@ -8,15 +8,15 @@ function createAdminApp() {
     return getApps()[0];
   }
 
-  // 1. Vercel එකේ අපි සෙට් කරපු Environment Variable එක තියෙනවාදැයි බලන්න
   const serviceAccountKey = process.env.FIREBASE_SERVICE_ACCOUNT_KEY;
   let serviceAccount;
 
   if (serviceAccountKey) {
-    // Vercel Production: Text එකක් ලෙස ඇති JSON එක Object එකක් බවට පත් කරයි
-    serviceAccount = JSON.parse(serviceAccountKey);
+    // Vercel Production: Base64 String එක සාමාන්‍ය JSON එකක් බවට Decode කරයි
+    const decodedKey = Buffer.from(serviceAccountKey, 'base64').toString('utf8');
+    serviceAccount = JSON.parse(decodedKey);
   } else {
-    // Localhost Development: Variable එක නැති නිසා සාමාන්‍ය පරිදි ෆයිල් එක කියවයි
+    // Localhost Development: සාමාන්‍ය පරිදි ෆයිල් එක කියවයි
     const serviceAccountPath = path.join(
       process.cwd(),
       "firebase-service-account.json"
